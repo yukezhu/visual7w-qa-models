@@ -94,7 +94,7 @@ Visual Genome telling ([gpu](http://vision.stanford.edu/yukezhu/model_visualgeno
 
 ## Visual QA Demo
 We have provided a demo script for you to run a pretrained QA model on your own image and ask your own questions. `demo.lua` has provided a pipeline for answering a list of sample questions (written in `demo.lua`) on a [demo image](https://raw.githubusercontent.com/yukezhu/visual7w-qa-models/master/data/demo.jpg). Use the following commands to run the QA demo.
-```
+```bash
 # run demo script on GPU mode
 wget http://vision.stanford.edu/yukezhu/model_visual7w_telling_gpu.t7 -P checkpoints
 th demo.lua -model checkpoints/model_visual7w_telling_gpu.t7 -gpuid 0
