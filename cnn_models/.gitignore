@@ -1,0 +1,3 @@
+*.prototxt
+*.caffemodel
+*.lua
