@@ -1,6 +1,6 @@
 # Visual7W QA Models
 
-![alt text](http://web.stanford.edu/~yukez/images/img/visual7w_examples.png "Visual7W example QAs")
+![Visual7W QA samples](http://web.stanford.edu/~yukez/images/img/visual7w_examples.png "Visual7W example QAs")
 
 ## Introduction
 
@@ -93,18 +93,21 @@ Visual Genome telling ([gpu](http://vision.stanford.edu/yukezhu/model_visualgeno
 - You can use the script `gpu_to_cpu.lua` to convert a GPU model to a CPU copy.
 
 ## Visual QA Demo
-We have provided a demo script for you to run a pretrained QA model on your own image and ask your own questions. `demo.lua` has provided a pipeline for answering a list of sample questions (written in `demo.lua`) on a [demo image](). Use the following commands to run the QA demo.
+We have provided a demo script for you to run a pretrained QA model on your own image and ask your own questions. `demo.lua` has provided a pipeline for answering a list of sample questions (written in `demo.lua`) on a [demo image](https://raw.githubusercontent.com/yukezhu/visual7w-qa-models/master/data/demo.jpg). Use the following commands to run the QA demo.
 ```
-# run the demo script on GPU mode
+# run demo script on GPU mode
 wget http://vision.stanford.edu/yukezhu/model_visual7w_telling_gpu.t7 -P checkpoints
 th demo.lua -model checkpoints/model_visual7w_telling_gpu.t7 -gpuid 0
 
-# alternatively, run the demo script on CPU mode
+# alternatively, run demo script on CPU mode
 wget http://vision.stanford.edu/yukezhu/model_visual7w_telling_cpu.t7 -P checkpoints
 th demo.lua -model checkpoints/model_visual7w_telling_cpu.t7 -gpuid -1
 ```
 
-You will see the QA model is able to produce reasonable answers on this [image](). Feel free to use your own images or answer your own questions :)
+You will see the QA model produces reasonable answers on the [demo image](https://raw.githubusercontent.com/yukezhu/visual7w-qa-models/master/data/demo.jpg) below. Feel free to try your own images or ask your own questions :)
+
+![Visual7W QA demo](https://raw.githubusercontent.com/yukezhu/visual7w-qa-models/master/data/demo.jpg "Visual7W QA demo")
+
 ```
 ** QA demo on data/demo.jpg **
 
