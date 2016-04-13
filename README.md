@@ -85,8 +85,8 @@ These models are trained on the *telling* QA tasks, using the [Visual7W](http://
 
 Dataset                       | Num. QA  | What  | Where | When  | Who  | Why  | How  | Overall |
 ----------------------------- |-------------------| ------| ------| ------| -----| -----| -----| --------|
-Visual7W telling ([gpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_cpu.t7)) | 139,868 | 0.529	| 0.560	| 0.743	| 0.602	| 0.522	| 0.466	| 0.541 |
-Visual Genome telling ([gpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_gpu.t7))    | 1,359,108 | - | - | - | - | - | - | - |
+Visual7W telling ([data](http://web.stanford.edu/~yukez/papers/resources/dataset_v7w_telling.zip)\|[gpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_cpu.t7)) | 139,868 | 0.529	| 0.560	| 0.743	| 0.602	| 0.522	| 0.466	| 0.541 |
+Visual Genome telling ([data](http://web.stanford.edu/~yukez/papers/resources/dataset_visualgenome_telling.zip)\|[gpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_gpu.t7))    | 1,359,108 | 0.572	| 0.613	| 0.760	| 0.624	| 0.590	| 0.531	| 0.587 |
 
 **Note:**
 - Visual7W QA is a subset of Visual Genome QA, but has additional annotations (such as *multiple choices* and *object groundings*) for evaluation and analysis. The numbers are multiple-choice accuracies reported on the Visual7W test set.
