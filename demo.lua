@@ -20,7 +20,7 @@ local questions = {
   'How many people are there?',
   'What animal can be seen in the picture?',
   'Who is wearing a red shirt?',
-  'Where color is the elephant?',
+  'What color is the elephant?',
   'When is the picture taken?'
 }
 
