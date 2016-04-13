@@ -123,7 +123,6 @@ local function eval_split(split, evalopt)
     local q_len, a_len = batch.question_length, batch.answer_length
     local question_labels, answer_labels = utils.split_question_answer(batch.labels, q_len, a_len)
 
-    local loss = 0
     -- use multiple choices for evaluation
     if opt.mc_evaluation then
       local questions = net_utils.decode_sequence(vocab, question_labels)
