@@ -1,17 +1,17 @@
 # Visual7W QA Models
 
-![Visual7W QA samples](http://web.stanford.edu/~yukez/images/img/visual7w_examples.png "Visual7W example QAs")
+![Visual7W QA samples](http://ai.stanford.edu/~yukez/images/img/visual7w_examples.png "Visual7W example QAs")
 
 ## Introduction
 
-[Visual7W](http://web.stanford.edu/~yukez/visual7w/) is a large-scale visual question answering (QA) dataset, with object-level groundings and multimodal answers.
-Each question starts with one of the seven Ws, *what*, *where*, *when*, *who*, *why*, *how* and *which*. Please check out [our CVPR'16 paper](http://web.stanford.edu/~yukez/papers/cvpr2016.pdf) for more details. This repository provides a [torch](http://torch.ch/) implementation of the attention-based QA model from our paper. Part of the code is adapted from [neuraltalk2](https://github.com/karpathy/neuraltalk2).
+[Visual7W](http://ai.stanford.edu/~yukez/visual7w/) is a large-scale visual question answering (QA) dataset, with object-level groundings and multimodal answers.
+Each question starts with one of the seven Ws, *what*, *where*, *when*, *who*, *why*, *how* and *which*. Please check out [our CVPR'16 paper](http://ai.stanford.edu/~yukez/papers/cvpr2016.pdf) for more details. This repository provides a [torch](http://torch.ch/) implementation of the attention-based QA model from our paper. Part of the code is adapted from [neuraltalk2](https://github.com/karpathy/neuraltalk2).
 
 ## Dataset Overview
-The [Visual7W](http://web.stanford.edu/~yukez/visual7w/) dataset is collected on 47,300 COCO images. In total, it has 327,939 QA pairs, together with 1,311,756 human-generated multiple-choices and 561,459 object groundings from 36,579 categories. In addition, we provide complete grounding annotations that link the object mentions in the QA sentences to their bounding boxes in the images and therefore introduce a new QA type with image regions as the visually grounded answers. We refer to questions with textual answers
-as *telling* QA and to such with visual answers as *pointing* QA. The figure above shows some examples in the [Visual7W](http://web.stanford.edu/~yukez/visual7w/) dataset, where the first row shows *telling* QA examples, and the second row shows *pointing* QA examples.
+The [Visual7W](http://ai.stanford.edu/~yukez/visual7w/) dataset is collected on 47,300 COCO images. In total, it has 327,939 QA pairs, together with 1,311,756 human-generated multiple-choices and 561,459 object groundings from 36,579 categories. In addition, we provide complete grounding annotations that link the object mentions in the QA sentences to their bounding boxes in the images and therefore introduce a new QA type with image regions as the visually grounded answers. We refer to questions with textual answers
+as *telling* QA and to such with visual answers as *pointing* QA. The figure above shows some examples in the [Visual7W](http://ai.stanford.edu/~yukez/visual7w/) dataset, where the first row shows *telling* QA examples, and the second row shows *pointing* QA examples.
 
-[Visual7W](http://web.stanford.edu/~yukez/visual7w/) constitutes a part of the [Visual Genome](http://visualgenome.org/) project. Visual Genome contains 1.7 million QA pairs of the 7W question types, which offers the largest visual QA collection to date for training models. The QA pairs in [Visual7W](http://web.stanford.edu/~yukez/visual7w/) are a subset of the 1.7 million QA pairs from Visual Genome. Moreover, [Visual7W](http://web.stanford.edu/~yukez/visual7w/) includes extra annotations such as object groundings, multiple choices and human experiments, making it a clean and complete benchmark for evaluation and analysis.
+[Visual7W](http://ai.stanford.edu/~yukez/visual7w/) constitutes a part of the [Visual Genome](http://visualgenome.org/) project. Visual Genome contains 1.7 million QA pairs of the 7W question types, which offers the largest visual QA collection to date for training models. The QA pairs in [Visual7W](http://ai.stanford.edu/~yukez/visual7w/) are a subset of the 1.7 million QA pairs from Visual Genome. Moreover, [Visual7W](http://ai.stanford.edu/~yukez/visual7w/) includes extra annotations such as object groundings, multiple choices and human experiments, making it a clean and complete benchmark for evaluation and analysis.
 
 ## Dependencies
 1.  **Python 2.7**
@@ -81,12 +81,12 @@ th eval_telling.lua -model <path-to-model> -mc_evaluation
 
 ## Model Zoo
 To make it easy, we have released a list of pre-trained QA models for you to play with.
-These models are trained on the *telling* QA tasks, using the [Visual7W](http://web.stanford.edu/~yukez/visual7w/) dataset and the larger Visual Genome dataset. You can download these models in both CPU and GPU modes below.
+These models are trained on the *telling* QA tasks, using the [Visual7W](http://ai.stanford.edu/~yukez/visual7w/) dataset and the larger Visual Genome dataset. You can download these models in both CPU and GPU modes below.
 
 Dataset                       | Num. QA  | What  | Where | When  | Who  | Why  | How  | Overall |
 ----------------------------- |-------------------| ------| ------| ------| -----| -----| -----| --------|
-Visual7W telling ([data](http://web.stanford.edu/~yukez/papers/resources/dataset_v7w_telling.zip)\|[gpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_cpu.t7)) | 139,868 | 0.529	| 0.560	| 0.743	| 0.602	| 0.522	| 0.466	| 0.541 |
-Visual Genome telling ([data](http://web.stanford.edu/~yukez/papers/resources/dataset_visualgenome_telling.zip)\|[gpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_cpu.t7))    | 1,359,108 | 0.572	| 0.613	| 0.760	| 0.624	| 0.590	| 0.531	| 0.587 |
+Visual7W telling ([data](http://ai.stanford.edu/~yukez/papers/resources/dataset_v7w_telling.zip)\|[gpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visual7w_telling_cpu.t7)) | 139,868 | 0.529	| 0.560	| 0.743	| 0.602	| 0.522	| 0.466	| 0.541 |
+Visual Genome telling ([data](http://ai.stanford.edu/~yukez/papers/resources/dataset_visualgenome_telling.zip)\|[gpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_gpu.t7)\|[cpu](http://vision.stanford.edu/yukezhu/model_visualgenome_telling_cpu.t7))    | 1,359,108 | 0.572	| 0.613	| 0.760	| 0.624	| 0.590	| 0.531	| 0.587 |
 
 **Note:**
 - Visual7W QA is a subset of Visual Genome QA, but has additional annotations (such as *multiple choices* and *object groundings*) for evaluation and analysis. The numbers are multiple-choice accuracies reported on the Visual7W test set.
